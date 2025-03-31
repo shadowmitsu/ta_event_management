@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<html lang="id" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@yield('title') | Event Management</title>
+    <title>@yield('title') | Manajemen Acara</title>
     <link rel="icon" type="image/png" href="Modernize/images/logos/favicon.png">
     <link rel="stylesheet" href="{{ asset('vendor/owl.carousel/dist/assets/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
@@ -59,8 +59,6 @@
 
     <script src="{{ asset('vendor/owl.carousel/dist/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('vendor/apexcharts/dist/apexcharts.min.js') }}"></script>
-    {{-- <script src="{{ asset('js/dashboards/dashboard.js') }}"></script> --}}
-    <!-- Select2 CSS -->
 
     @stack('scripts')
 </body>

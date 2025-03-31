@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
+<html lang="id" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | Event Management</title>
+    <title>Masuk | Manajemen Acara</title>
     <link rel="icon" type="image/png"
         href="https://cdn-icons-png.flaticon.com/512/11287/11287355.png">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
@@ -37,17 +37,17 @@
                         <div
                             class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4">
                             <div class="col-sm-8 col-md-6 col-xl-9">
-                                <h2 class="mb-3 fs-7 fw-bolder">Welcome to Event Management</h2>
-                                <p class=" mb-9">Your Admin Dashboard</p>
+                                <h2 class="mb-3 fs-7 fw-bolder">Selamat datang di Manajemen Acara</h2>
+                                <p class=" mb-9">Dasbor Admin Anda</p>
                                 <form action="{{ route('login.process') }}" method="POST">
                                     @csrf
                                     <div class="mb-3">
-                                        <label for="username" class="form-label">Username</label>
+                                        <label for="username" class="form-label">Nama Pengguna</label>
                                         <input type="text" class="form-control" id="username" name="username"
                                             required>
                                     </div>
                                     <div class="mb-4">
-                                        <label for="password" class="form-label">Password</label>
+                                        <label for="password" class="form-label">Kata Sandi</label>
                                         <input type="password" class="form-control" id="password" name="password"
                                             required>
                                     </div>
@@ -56,12 +56,11 @@
                                             <input class="form-check-input primary" type="checkbox" id="remember"
                                                 name="remember">
                                             <label class="form-check-label text-dark" for="remember">
-                                                Remember this Device
+                                                Ingat Perangkat Ini
                                             </label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary w-100 py-8 mb-4 rounded-2">Sign
-                                        In</button>
+                                    <button type="submit" class="btn btn-primary w-100 py-8 mb-4 rounded-2">Masuk</button>
                                 </form>
 
                                 @if ($errors->any())

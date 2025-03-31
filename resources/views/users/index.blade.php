@@ -5,13 +5,13 @@
         <div class="card-body px-4 py-3">
             <div class="row align-items-center">
                 <div class="col-9">
-                    <h4 class="fw-semibold mb-8">Users</h4>
+                    <h4 class="fw-semibold mb-8">Pengguna</h4>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a class="text-muted text-decoration-none" href="{{ route('dashboard.index') }}">Dashboard</a>
                             </li>
-                            <li class="breadcrumb-item" aria-current="page">Users</li>
+                            <li class="breadcrumb-item" aria-current="page">Pengguna</li>
                         </ol>
                     </nav>
                 </div>
@@ -28,27 +28,27 @@
             <div class="card-body">
                 <div class="d-sm-flex d-block align-items-center justify-content-between mb-3">
                     <div class="mb-3 mb-sm-0">
-                        <h5 class="card-title fw-semibold">List Users</h5>
+                        <h5 class="card-title fw-semibold">Daftar Pengguna</h5>
                     </div>
                     <div>
                         <button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#createUserModal">
-                            Add User</button>
+                            Tambah Pengguna</button>
                     </div>
                 </div>
                 <div class="table-responsive">
                     <table class="table align-middle text-nowrap mb-0">
                         <thead>
                             <tr class="text-muted fw-semibold">
-                                <th scope="col" class="ps-0">Full Name</th>
+                                <th scope="col" class="ps-0">Nama Lengkap</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Role</th>
                                 <th scope="col">Status</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody id="userTableBody">
-                           
+
                         </tbody>
                     </table>
                 </div>
@@ -61,12 +61,12 @@
             <div class="modal-content">
                 <form id="createUserForm">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add New User</h5>
+                        <h5 class="modal-title">Tambah Pengguna Baru</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="createFullName" class="form-label">Full Name</label>
+                            <label for="createFullName" class="form-label">Nama Lengkap</label>
                             <input type="text" class="form-control" id="createFullName" name="full_name">
                         </div>
                         <div class="mb-3">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Save User</button>
+                        <button type="submit" class="btn btn-success">Simpan Pengguna</button>
                     </div>
                 </form>
             </div>
@@ -103,13 +103,13 @@
             <div class="modal-content">
                 <form id="editUserForm">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit User</h5>
+                        <h5 class="modal-title">Edit Pengguna</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" id="editUserId">
                         <div class="mb-3">
-                            <label for="editFullName" class="form-label">Full Name</label>
+                            <label for="editFullName" class="form-label">Nama Lengkap</label>
                             <input type="text" class="form-control" id="editFullName" name="full_name">
                         </div>
                         <div class="mb-3">
@@ -134,7 +134,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
                     </div>
                 </form>
             </div>
@@ -146,15 +146,15 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Delete User</h5>
+                    <h5 class="modal-title">Hapus Pengguna</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Are you sure you want to delete this user?
+                    Apakah Anda yakin ingin menghapus pengguna ini?
                     <input type="hidden" id="deleteUserId">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" id="confirmDeleteUser">Delete</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteUser">Hapus</button>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Event Details')
+@section('title', 'Detail Acara')
 
 @section('content')
     <div class="container-fluid">
@@ -7,16 +7,16 @@
             <div class="card-body px-4 py-3">
                 <div class="row align-items-center">
                     <div class="col-9">
-                        <h4 class="fw-semibold mb-8">Event Details</h4>
+                        <h4 class="fw-semibold mb-8">Detail Acara</h4>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
                                     <a class="text-muted text-decoration-none" href="{{ route('dashboard.index') }}">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a class="text-muted text-decoration-none" href="{{ route('events.index') }}">Events</a>
+                                    <a class="text-muted text-decoration-none" href="{{ route('events.index') }}">Acara</a>
                                 </li>
-                                <li class="breadcrumb-item active" aria-current="page">Event Details</li>
+                                <li class="breadcrumb-item active" aria-current="page">Detail Acara</li>
                             </ol>
                         </nav>
                     </div>
@@ -29,12 +29,12 @@
             </div>
         </div>
 
-        <!-- Event Details -->
+        <!-- Detail Acara -->
         <div class="card">
             <div class="card-body">
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <h5>Event Title</h5>
+                        <h5>Judul Acara</h5>
                         <p>{{ $event->title }}</p>
                     </div>
                     <div class="col-md-6">
@@ -45,32 +45,32 @@
 
                 <div class="row mb-3">
                     <div class="col-md-12">
-                        <h5>Short Description</h5>
+                        <h5>Deskripsi Singkat</h5>
                         <p>{{ $event->short_desc }}</p>
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col-md-12">
-                        <h5>Long Description</h5>
+                        <h5>Deskripsi Lengkap</h5>
                         <p>{{ $event->long_description }}</p>
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <h5>Start Date</h5>
+                        <h5>Tanggal Mulai</h5>
                         <p>{{ $event->start_date }}</p>
                     </div>
                     <div class="col-md-6">
-                        <h5>End Date</h5>
+                        <h5>Tanggal Selesai</h5>
                         <p>{{ $event->end_date }}</p>
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col-md-12">
-                        <h5>Assigned Users</h5>
+                        <h5>Pengguna yang Ditugaskan</h5>
                         <ul>
                             @foreach ($event->users as $user)
                                 <li>{{ $user->full_name }}</li>
@@ -81,14 +81,14 @@
 
                 <div class="row mb-4">
                     <div class="col-md-12">
-                        <h5 class="fw-bold mb-3">Event Media</h5>
+                        <h5 class="fw-bold mb-3">Media Acara</h5>
                         <div class="d-flex flex-wrap gap-3">
                             @foreach ($event->eventMedia as $media)
                                 <div class="card shadow-sm border-0" style="width: 12rem;">
                                     <img src="{{ asset('storage/'.$media->file_path) }}" class="card-img-top rounded" alt="Media {{ $media->id }}">
                                     <div class="card-body text-center">
                                         <a href="{{ asset('storage/'.$media->file_path) }}" class="btn btn-outline-primary btn-sm" target="_blank">
-                                            <i class="bi bi-eye"></i> View Media
+                                            <i class="bi bi-eye"></i> Lihat Media
                                         </a>
                                     </div>
                                 </div>
@@ -96,10 +96,9 @@
                         </div>
                     </div>
                 </div>
-                
 
                 <div class="form-group text-end">
-                    <a href="{{ route('events.index') }}" class="btn btn-secondary">Back to Events</a>
+                    <a href="{{ route('events.index') }}" class="btn btn-secondary">Kembali ke Acara</a>
                 </div>
             </div>
         </div>

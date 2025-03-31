@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
@@ -91,7 +91,7 @@
             <div><i class="fas fa-calendar-alt event-icon"></i></div>
             <div class="welcome-section">
                 <div class="app-name">
-                    EVENT MANAGEMENT
+                    MANAJEMEN EVENT
                 </div>
                 <div class="welcome-text">
                     {{ $details['title'] }}
@@ -100,12 +100,12 @@
                     <i class="fas fa-envelope-open"></i>
                 </div>
             </div>
-            <h2>Hello, {{ $details['full_name'] }}</h2>
+            <h2>Halo, {{ $details['full_name'] }}</h2>
             <p>{{ $details['body'] }}</p>
         </div>
         <div class="footer-text">
-            <p>If you did not expect this notification, please <a href="#">contact us</a> immediately.</p>
-            <p>Thank you,<br>The Event Management Team</p>
+            <p>Jika Anda tidak mengharapkan pemberitahuan ini, silakan <a href="#">hubungi kami</a> segera.</p>
+            <p>Terima kasih,<br>Tim Manajemen Event</p>
         </div>
     </div>
 

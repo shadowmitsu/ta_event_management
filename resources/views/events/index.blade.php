@@ -1,19 +1,19 @@
 @extends('layouts.app')
-@section('title', 'Events')
+@section('title', 'Acara')
 @section('content')
     <div class="container-fluid">
         <div class="card bg-info-subtle shadow-none position-relative overflow-hidden mb-4">
             <div class="card-body px-4 py-3">
                 <div class="row align-items-center">
                     <div class="col-9">
-                        <h4 class="fw-semibold mb-8">Events</h4>
+                        <h4 class="fw-semibold mb-8">Acara</h4>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
                                     <a class="text-muted text-decoration-none"
                                         href="{{ route('dashboard.index') }}">Dashboard</a>
                                 </li>
-                                <li class="breadcrumb-item" aria-current="page">Events</li>
+                                <li class="breadcrumb-item" aria-current="page">Acara</li>
                             </ol>
                         </nav>
                     </div>
@@ -26,12 +26,11 @@
             </div>
         </div>
 
-
         @if (session('success'))
             <script>
                 Swal.fire({
                     icon: 'success',
-                    title: 'Success!',
+                    title: 'Berhasil!',
                     text: '{{ session('success') }}',
                     timer: 2000,
                     showConfirmButton: false
@@ -45,7 +44,7 @@
                     <div class="col-md-4 col-xl-3">
                         <form class="position-relative">
                             <input type="text" class="form-control product-search ps-5" id="input-search"
-                                placeholder="Search Events...">
+                                placeholder="Cari Acara...">
                             <i
                                 class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
                         </form>
@@ -55,24 +54,23 @@
                         @if (Auth::user()->role == 'admin')
                             <a href="{{ route('events.create') }}" id="btn-add-event"
                                 class="btn btn-sm btn-info d-flex align-items-center">
-                                <i class="ti ti-plus text-white me-1 fs-5"></i> Add Event
+                                <i class="ti ti-plus text-white me-1 fs-5"></i> Tambah Acara
                             </a>
                         @endif
                     </div>
                 </div>
             </div>
 
-
             <div class="card card-body">
                 <div class="table-responsive">
                     <table class="table search-table align-middle text-nowrap">
                         <thead class="header-item">
                             <tr>
-                                <th>Title</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
+                                <th>Judul</th>
+                                <th>Tanggal Mulai</th>
+                                <th>Tanggal Selesai</th>
                                 <th>Status</th>
-                                <th width="180">Actions</th>
+                                <th width="180">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -92,7 +90,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="button" class="btn btn-sm btn-danger delete-btn">
-                                                    Delete
+                                                    Hapus
                                                 </button>
                                             </form>
                                         @endif
@@ -102,11 +100,10 @@
                                     </td>
                                 </tr>
                             @endforeach
-
                         </tbody>
                     </table>
 
-                    <nav aria-label="Page navigation">
+                    <nav aria-label="Navigasi halaman">
                         {{ $events->links() }}
                     </nav>
                 </div>
@@ -118,16 +115,16 @@
             button.addEventListener('click', function(event) {
                 event.preventDefault();
                 Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
+                    title: 'Apakah Anda yakin?',
+                    text: "Anda tidak akan bisa mengembalikannya!",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
+                    confirmButtonText: 'Ya, hapus!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        this.closest('form').submit(); // Submit the form
+                        this.closest('form').submit(); // Kirim formulir
                     }
                 });
             });

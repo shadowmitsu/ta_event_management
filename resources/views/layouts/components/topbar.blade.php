@@ -42,7 +42,7 @@
                                 aria-labelledby="drop1">
                                 <div class="profile-dropdown position-relative" data-simplebar>
                                     <div class="py-3 px-7 pb-0">
-                                        <h5 class="mb-0 fs-5 fw-semibold">User Profile</h5>
+                                        <h5 class="mb-0 fs-5 fw-semibold">Profil Pengguna</h5>
                                     </div>
                                     <div class="d-flex align-items-center py-9 mx-7 border-bottom">
                                         <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
@@ -55,12 +55,11 @@
                                     <div class="d-grid py-4 px-7 pt-8">
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
-                                            <button type="submit" class="btn btn-outline-primary">Log Out</button>
+                                            <button type="submit" class="btn btn-outline-primary">Keluar</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-
                         </li>
                     </ul>
                 </div>
@@ -91,6 +90,5 @@
                 </li>
             </ul>
         </nav>
-
     </div>
 </header>

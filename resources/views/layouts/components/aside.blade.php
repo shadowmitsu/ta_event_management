@@ -17,7 +17,7 @@
                 <!-- Home -->
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                    <span class="hide-menu">Home</span>
+                    <span class="hide-menu">Beranda</span>
                 </li>
                 <!-- Dashboard -->
                 <li class="sidebar-item">
@@ -53,7 +53,7 @@
                             <span>
                                 <i class="ti ti-file-report"></i>
                             </span>
-                            <span class="hide-menu">Report</span>
+                            <span class="hide-menu">Laporan</span>
                         </a>
                     </li>
 
@@ -62,7 +62,7 @@
                             <span>
                                 <i class="ti ti-users"></i>
                             </span>
-                            <span class="hide-menu">Users</span>
+                            <span class="hide-menu">Pengguna</span>
                         </a>
                     </li>
                 @endif
