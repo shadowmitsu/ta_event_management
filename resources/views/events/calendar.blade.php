@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Kalender')
+@section('title', 'Kalender Acara')
 @section('content')
     <div class="container-fluid">
         <div class="card bg-info-subtle shadow-none position-relative overflow-hidden mb-4">

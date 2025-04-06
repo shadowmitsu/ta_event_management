@@ -1,10 +1,10 @@
 @extends('layouts.app')
-
+@section('title', 'Buat Laporan Acara')
 @section('content')
     <div class="container-fluid">
         <div class="card bg-light shadow-none mb-4">
             <div class="card-body px-4 py-3">
-                <h4 class="fw-semibold mb-8">Buat Laporan Event</h4>
+                <h4 class="fw-semibold mb-8">Buat Laporan Acara</h4>
             </div>
         </div>
 
@@ -23,12 +23,10 @@
         <div class="card card-body">
             <form action="{{ route('event_reports.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-
-                <!-- Pilih Event -->
                 <div class="mb-3">
-                    <label for="event_id" class="form-label">Event</label>
+                    <label for="event_id" class="form-label">Acara</label>
                     <select class="form-select" id="event_id" name="event_id" required>
-                        <option selected disabled>Pilih event</option>
+                        <option selected disabled>Pilih Acara</option>
                         @foreach($events as $event)
                             <option value="{{ $event->id }}">{{ $event->title }}</option>
                         @endforeach
@@ -50,14 +48,13 @@
                     <textarea class="form-control" id="report_content" name="report_content" rows="5"></textarea>
                 </div>
 
-                <!-- Link Tambahan -->
                 <div class="mb-3">
                     <label for="additional_link" class="form-label">Link Tambahan</label>
                     <input type="text" class="form-control" id="additional_link" name="additional_link" placeholder="http://example.com">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="media" class="form-label">Media Laporan Event</label>
+                    <label for="media" class="form-label">Media Laporan Acara</label>
                     <div id="media-uploads">
                         <div class="input-group mb-2">
                             <input type="file" class="form-control" name="files[]" required>
@@ -66,7 +63,6 @@
                     </div>
                 </div>
 
-                <!-- Tombol Kirim -->
                 <button type="submit" class="btn btn-primary">Kirim Laporan</button>
             </form>
         </div>
@@ -75,7 +71,6 @@
     @push('scripts')
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-        <!-- Select2 JS -->
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script>
             $(document).ready(function() {

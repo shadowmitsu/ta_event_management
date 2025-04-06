@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Data Pengguna')
 @section('content')
     <div class="card bg-info-subtle shadow-none position-relative overflow-hidden mb-4">
         <div class="card-body px-4 py-3">

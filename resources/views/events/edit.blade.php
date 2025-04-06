@@ -1,6 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Edit Event')
-
+@section('title', 'Edit Acara')
 @section('content')
     <div class="container-fluid">
         <div class="card bg-info-subtle shadow-none position-relative overflow-hidden mb-4">

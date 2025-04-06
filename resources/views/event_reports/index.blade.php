@@ -1,8 +1,7 @@
 @extends('layouts.app')
-
+@section('title', 'Data Laporan Event')
 @section('content')
     <div class="container-fluid">
-        <!-- Bagian Header Kartu -->
         <div class="card bg-info-subtle shadow-none position-relative overflow-hidden mb-4">
             <div class="card-body px-4 py-3">
                 <div class="row align-items-center">
@@ -116,7 +115,7 @@
                             <div class="mb-3">
                                 <label for="edit_event_id" class="form-label">Acara</label>
                                 <select class="form-select" id="edit_event_id" name="event_id" required>
-                                    <option selected disabled>Pilih acara</option>
+                                    <option selected disabled>Pilih Acara</option>
                                     @foreach ($events as $event)
                                         <option value="{{ $event->id }}">{{ $event->title }}</option>
                                     @endforeach

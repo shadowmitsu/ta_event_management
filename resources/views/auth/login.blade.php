@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Masuk | Manajemen Acara</title>
+    <title>Masuk | SIJADWALBOJONGSARI</title>
     <link rel="icon" type="image/png"
-        href="https://cdn-icons-png.flaticon.com/512/11287/11287355.png">
+        href="{{ asset('images/logos/logo-purbalingga.png') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
 </head>
 
@@ -21,12 +21,12 @@
             <div class="position-relative z-index-5">
                 <div class="row">
                     <div class="col-xl-7 col-xxl-8">
-                        <a href="" class="text-nowrap logo-img d-block px-4 py-9 w-100">
-                            <img src="https://cdn-icons-png.flaticon.com/512/11287/11287355.png"
-                                class="dark-logo" alt="Logo-Dark" width="40" />
-                            <img src="https://cdn-icons-png.flaticon.com/512/11287/11287355.png"
-                                class="light-logo" alt="Logo-light" width="40" />
+                        <a href="" class="text-nowrap logo-img d-block px-4 py-9 w-100 d-flex align-items-center">
+                            <img src="{{ asset('images/logos/logo-purbalingga.png') }}" class="dark-logo" alt="Logo-Dark" width="40" />
+                            <img src="{{ asset('images/logos/logo-purbalingga.png') }}" class="light-logo" alt="Logo-light" width="40" />
+                            <span class="ms-2 fw-bold text-dark">SIJADWALBOJONGSARI</span>
                         </a>
+                        
                         <div class="d-none d-xl-flex align-items-center justify-content-center"
                             style="height: calc(100vh - 80px);">
                             <img src="images/backgrounds/login-security.svg" alt="" class="img-fluid"
@@ -37,7 +37,7 @@
                         <div
                             class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4">
                             <div class="col-sm-8 col-md-6 col-xl-9">
-                                <h2 class="mb-3 fs-7 fw-bolder">Selamat datang di Manajemen Acara</h2>
+                                <h2 class="mb-3 fs-7 fw-bolder">Selamat datang di SIJADWALBOJONGSARI</h2>
                                 <p class=" mb-9">Dasbor Admin Anda</p>
                                 <form action="{{ route('login.process') }}" method="POST">
                                     @csrf
