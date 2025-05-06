@@ -6,19 +6,7 @@
             <div class="card-body px-4 py-3">
                 <div class="row align-items-center">
                     <div class="col-9">
-                        <h4 class="fw-semibold mb-8">Buat Event</h4>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    <a class="text-muted text-decoration-none"
-                                        href="{{ route('dashboard.index') }}">Dashboard</a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a class="text-muted text-decoration-none" href="{{ route('events.index') }}">Event</a>
-                                </li>
-                                <li class="breadcrumb-item active" aria-current="page">Buat Event</li>
-                            </ol>
-                        </nav>
+                        <h4 class="fw-semibold mb-8">Buat Acara</h4>
                     </div>
                     <div class="col-3">
                         <div class="text-center mb-n5">
@@ -29,22 +17,15 @@
             </div>
         </div>
 
-        <!-- Form untuk membuat event -->
         <div class="card">
             <div class="card-body">
-                <!-- Termasuk Select2 CSS dan JS -->
 
                 <form action="{{ route('events.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group mb-3">
-                        <label for="title" class="form-label">Judul Event</label>
+                        <label for="title" class="form-label">Judul Acara</label>
                         <input type="text" class="form-control" id="title" name="title" required>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        <label for="short_desc" class="form-label">Deskripsi Singkat</label>
-                        <textarea class="form-control" id="short_desc" name="short_desc" rows="3" required></textarea>
                     </div>
 
                     <div class="form-group mb-3">

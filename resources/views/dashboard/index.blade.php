@@ -94,7 +94,7 @@
                                 @foreach($reports as $report)
                                     <tr>
                                         <td>{{ $report->event->title }}</td>
-                                        <td>{{ $report->createdBy->full_name }}</td>
+                                        <td>{{ $report->createdBy ? $report->createdBy->full_name : '' }}</td>
                                         <td>{{ Str::limit($report->report_content, 100) }}</td>
                                         <td>
                                             @if($report->additional_link)

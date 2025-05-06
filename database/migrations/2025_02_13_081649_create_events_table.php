@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('short_desc');
             $table->longText('long_desc')->nullable();
             $table->enum('status', ['draft', 'published', 'completed'])->default('draft');
             $table->date('start_date');
