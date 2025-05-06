@@ -44,15 +44,8 @@
 
                 <div class="row mb-3">
                     <div class="col-md-12">
-                        <h5>Deskripsi Singkat</h5>
-                        <p>{{ $event->short_desc }}</p>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-md-12">
                         <h5>Deskripsi Lengkap</h5>
-                        <p>{{ $event->long_description }}</p>
+                        <p>{{ $event->long_desc }}</p>
                     </div>
                 </div>
 
