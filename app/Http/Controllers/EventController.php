@@ -35,7 +35,6 @@ class EventController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'short_desc' => 'required|string',
             'start_date' => 'required|date',
             'end_date' => 'required|date|after_or_equal:start_date',
             'user_id' => 'required|array',
@@ -45,7 +44,6 @@ class EventController extends Controller
 
         $event = Event::create([
             'title' => $request->title,
-            'short_desc' => $request->short_desc,
             'long_desc' => $request->long_desc,
             'status' => $request->status ?? 'draft',
             'start_date' => $request->start_date,
