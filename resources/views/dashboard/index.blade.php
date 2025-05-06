@@ -56,7 +56,7 @@
                                 @foreach($events as $event)
                                     <tr>
                                         <td>{{ $event->title }}</td>
-                                        <td>{{ $event->short_desc }}</td>
+                                        <td>{{ \Illuminate\Support\Str::limit($event->long_desc, 50) }}</td>
                                         <td>{{ $event->start_date }}</td>
                                         <td>{{ $event->end_date }}</td>
                                         <td>{{ ucfirst($event->status) }}</td>
