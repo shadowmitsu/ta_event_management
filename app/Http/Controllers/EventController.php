@@ -62,7 +62,7 @@ class EventController extends Controller
 
             $details = [
                 'title' => $request->title,
-                'body' => $request->short_desc,
+                'body' => $request->long_desc,
                 'full_name' => $user->full_name
             ];
     
